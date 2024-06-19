@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include "SqList/sqList.h"
-#include "Insert/InsertionSort/insert.h"
+#include "Insert/BinarySort/insert.h"
 
 int main() {
     SqList L;
@@ -23,7 +23,7 @@ int main() {
     L.r[7].key = 2, L.r[7].otherinfo = 'x';
     L.r[8].key = 6, L.r[8].otherinfo = 'w';
     L.length = 8;
-    insertion_sort(&L);
+    binary_sort(&L);
     for (int i = 1; i <= L.length; i++) {
         printf("L.r[%d].key = %d L.r[%d].otherinfo = %c\n", i, L.r[i].key, i, L.r[i].otherinfo);
     }
