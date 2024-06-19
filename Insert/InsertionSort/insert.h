@@ -11,6 +11,8 @@
 #ifndef INSERT_INSERTIONSORT_INSERT_H_
 #define INSERT_INSERTIONSORT_INSERT_H_
 
+#include "SqList/sqList.h"
 
+void insertion_sort(SqList *list);
 
 #endif  // INSERT_INSERTIONSORT_INSERT_H_

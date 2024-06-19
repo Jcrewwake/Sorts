@@ -9,8 +9,16 @@
  */
 
 #include "Insert/InsertionSort/insert.h"
-#include "SqList/sqList.h"
 
-void insertion_sort() {
-    
+void insertion_sort(SqList *list) {
+    int i, j;
+    for (i = 2; i <= list->length; i++) {
+        if (list->r[i].key < list->r[i - 1].key) {
+            list->r[0] = list->r[i];
+            for (j = i - 1; list->r[0].key < list->r[j].key; j--) {
+                list->r[j + 1] = list->r[j];
+            }
+            list->r[j + 1] = list->r[0];
+        }
+    }
 }

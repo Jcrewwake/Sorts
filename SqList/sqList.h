@@ -30,8 +30,12 @@ typedef struct {
 void init_sqlist(SqList* list);
 
 /*
- *
- *
+ * print SqList all element
+ */
+void print_sqList(SqList *list);
+
+/*
+ * get  sqlist index=locate val
  */
 void get_sqlist(SqList* list, int locate, RedType* val);
 

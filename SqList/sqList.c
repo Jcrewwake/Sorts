@@ -14,6 +14,12 @@ void init_sqlist(SqList* list) {
     list->length = 0;
 }
 
+void print_sqList(SqList *list) {
+    for (int i = 1; i <= list->length; i++)
+        printf("i = %d, key = %d, otherinfo = %c\n",
+               i, list->r[i].key, list->r[i].otherinfo);
+}
+
 void get_sqlist(SqList* list, int locate, RedType* val) {
     if (locate < 1 || locate > list->length || list->length <= 0)
         return;
