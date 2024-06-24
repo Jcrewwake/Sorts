@@ -8,19 +8,11 @@
  * out of or in connection with the software or the use or other dealings in the software.
  */
 
-#ifndef INSERT_BINARYSORT_INSERT_H_
-#define INSERT_BINARYSORT_INSERT_H_
-
-#ifdef __cplusplus
-extern "C" {
-#endif
+#ifndef INSERT_SHELLSORT_INSERT_H_
+#define INSERT_SHELLSORT_INSERT_H_
 
 #include "SqList/sqList.h"
 
-void binary_sort(SqList *list);
+void shell_sort(SqList *list);
 
-#ifdef __cplusplus
-}
-#endif 
-
-#endif  // INSERT_BINARYSORT_INSERT_H_
+#endif  // INSERT_SHELLSORT_INSERT_H_
