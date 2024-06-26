@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
 #include "SqList/sqList.h"
-#include "Swap/QuickSort.h"
+#include "Select/SelectionSort.h"
 //////////////////////////////////////
 
 // class BinarySortTest : public testing::Test {
@@ -64,7 +64,7 @@ TEST(binary_sort_test, test) {
     t.r[7].key = 2, t.r[7].otherinfo = 'x';
     t.r[8].key = 6, t.r[8].otherinfo = 'w';
     t.length = 8;
-    quick_sort(&t, 1, 8);
+    selection_sort(&t);
     EXPECT_EQ(t.r[1].key, 1);
     EXPECT_EQ(t.r[1].otherinfo, 'c');
     EXPECT_EQ(t.r[2].key, 2);

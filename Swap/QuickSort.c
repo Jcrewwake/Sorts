@@ -11,7 +11,6 @@
  */
 
 #include "QuickSort.h"
-#include <stdio.h>
 
 void quick_sort(SqList *list, int low, int high) {
     if (low >= high) {

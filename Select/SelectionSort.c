@@ -10,19 +10,18 @@
  * software.
  */
 
-#include "BubbleSort.h"
+#include "SelectionSort.h"
 
-void bubble_sort(SqList *list) {
-    int flag = 1;  // 用于标识某次冒泡是否有交换
-    for (int i = 1; i <= list->length && flag; i++) {
-        flag = 0;
-        for (int j = 1; j <= list->length - i; j++) {
-            if (list->r[j].key > list->r[j + 1].key) {
-                flag = 1;
-                list->r[0] = list->r[j + 1];
-                list->r[j + 1] = list->r[j];
-                list->r[j] = list->r[0];
-            }
+void selection_sort(SqList *list) {
+    for (int i = 1; i < list->length; i++) {
+        int k = i;
+        for (int j = i + 1; j <= list->length; j++) {
+            if (list->r[j].key < list->r[k].key) k = j;
+        }
+        if (k != i) {
+            list->r[0] = list->r[k];
+            list->r[k] = list->r[i];
+            list->r[i] = list->r[0];
         }
     }
 }

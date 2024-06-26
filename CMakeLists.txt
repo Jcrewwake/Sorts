@@ -11,7 +11,7 @@ include_directories(./include . ./Insert ./SqList ./Swap)
 # 添加源文件
 set(SOURCE_FILES
     main.cpp
-    ./Swap/QuickSort.c
+    ./Select/SelectionSort.c
     ./SqList/sqList.c
 )
 
