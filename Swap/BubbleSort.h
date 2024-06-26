@@ -8,8 +8,8 @@
  * out of or in connection with the software or the use or other dealings in the software.
  */
 
-#ifndef INSERT_SHELLSORT_INSERT_H_
-#define INSERT_SHELLSORT_INSERT_H_
+#ifndef SWAP_BUBBLESORT_H_
+#define SWAP_BUBBLESORT_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -17,12 +17,10 @@ extern "C" {
 
 #include "SqList/sqList.h"
 
-void shell_sort(SqList *list, int dlta[], int t);
-
+void bubble_sort(SqList *list);
 
 #ifdef __cplusplus
 }
 #endif
 
-
-#endif  // INSERT_SHELLSORT_INSERT_H_
+#endif  // SWAP_BUBBLESORT_H_

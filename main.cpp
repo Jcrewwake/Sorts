@@ -1,17 +1,19 @@
 /*
  * Copyright (c) 2024 Long Yingwang
  *
- * This software is provided "as is", without warranty of any kind, express or implied,
- * including but not limited to the warranties of merchantability, fitness for a particular purpose
- * and noninfringement. In no event shall the authors or copyright holders be liable for any claim,
- * damages or other liability, whether in an action of contract, tort or otherwise, arising from,
- * out of or in connection with the software or the use or other dealings in the software.
+ * This software is provided "as is", without warranty of any kind, express or
+ * implied, including but not limited to the warranties of merchantability,
+ * fitness for a particular purpose and noninfringement. In no event shall the
+ * authors or copyright holders be liable for any claim, damages or other
+ * liability, whether in an action of contract, tort or otherwise, arising from,
+ * out of or in connection with the software or the use or other dealings in the
+ * software.
  */
 
 #include <stdio.h>
 #include <gtest/gtest.h>
 #include "SqList/sqList.h"
-#include "Insert/BinarySort/insert.h"
+#include "Swap/QuickSort.h"
 //////////////////////////////////////
 
 // class BinarySortTest : public testing::Test {
@@ -62,7 +64,7 @@ TEST(binary_sort_test, test) {
     t.r[7].key = 2, t.r[7].otherinfo = 'x';
     t.r[8].key = 6, t.r[8].otherinfo = 'w';
     t.length = 8;
-    binary_sort(&t);
+    quick_sort(&t, 1, 8);
     EXPECT_EQ(t.r[1].key, 1);
     EXPECT_EQ(t.r[1].otherinfo, 'c');
     EXPECT_EQ(t.r[2].key, 2);
@@ -94,7 +96,8 @@ TEST(binary_sort_test, test) {
 //     L.length = 8;
 //     binary_sort(&L);
 //     for (int i = 1; i <= L.length; i++) {
-//         printf("L.r[%d].key = %d L.r[%d].otherinfo = %c\n", i, L.r[i].key, i, L.r[i].otherinfo);
+//         printf("L.r[%d].key = %d L.r[%d].otherinfo = %c\n", i, L.r[i].key, i,
+//         L.r[i].otherinfo);
 //     }
 //     return 0;
 // }

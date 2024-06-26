@@ -21,6 +21,6 @@ void binary_sort(SqList *list);
 
 #ifdef __cplusplus
 }
-#endif 
+#endif
 
 #endif  // INSERT_BINARYSORT_INSERT_H_
